@@ -1,0 +1,54 @@
+/* CSS Document */
+* {
+	padding:0px;
+	margin:0px;
+}
+html {
+	margin: 0;
+	padding: 0;
+	font-family: 'Wellfleet', monospace;
+	font-size: 1.2em;
+	background-color: rgb(119, 87, 134);
+	color: #FFFF;
+	height: 100%;
+}
+.container {
+	text-align: center;
+	margin-top: 15%;
+}
+header {
+	padding-top:60px;
+	padding-bottom: 25px;
+}
+nav {
+	padding-top:40px;
+	padding-bottom:80px;
+
+}
+
+nav ul  {
+	list-style-type: none;
+}
+
+nav ul li {
+	display: inline-block;
+	font-size: 1.6em;
+}
+
+
+
+a:link, a:visited {
+	color:#ffffff;
+	text-decoration: none;
+}
+a:hover, a:active {
+	color:#aaaaaa;
+	text-decoration: none;
+}
+
+footer {
+	padding:20px;
+	margine:20px;
+	position: relative;
+	bottom:0px;
+}
