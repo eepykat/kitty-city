@@ -1,50 +1,78 @@
 /* CSS Document */
+
 * {
-	padding:0px;
-	margin:0px;
-}
-html, body {
 	margin: 0;
-	padding: 0;
-	font-family: 'Wellfleet', monospace;
-	font-size: 1.2em;
-	background-color: rgb(119, 87, 134);
-	color: #FFFF;
-	height: 100%;
-	width: 100%;
+    padding: 0;
 }
-.container {
+
+html, body {
+    width: 100%;
+	height: 100%;
+
+	/* Font for everything */
+	font-family: "Outfit", sans-serif;
+	font-optical-sizing: auto;
+	font-weight: 500;
+	font-style: normal;
+	font-size: 1em;
+	color: #FFFF;
+
+	background-color: rgb(19, 7, 30);
+    overflow-x: hidden;
+
+}
+
+header {
+	padding-top:30px;
+}
+
+#panel-nav {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    max-width: 960px;
     height: 100vh;
-    margin-left: auto;
-    margin-right: auto;
-}
-header {
-	padding-top:60px;
-	padding-bottom: 25px;
-}
-nav {
-	padding-top:40px;
-	padding-bottom:80px;
-
+	flex: 1;
 }
 
-nav ul  {
+#panel-nav h1, #panel-nav p {
+	transform: translateX(-150vh);
+	animation: transform1 0.8s 0.5s ease-out forwards;
+}
+
+#panel-nav svg {
+	width: 20%;
+	height: auto;
+	display: block;
+}
+@keyframes transform1 {
+	from {
+		transform: translateX(-150vh);
+		opacity: 0;
+	}
+	to {
+		transform: translateX(0);
+		opacity: 1;
+	}
+}
+
+#panel-nav ul  {
+	display: flex;
 	list-style-type: none;
+	padding-top: 10px;
+	flex: 1;
+	flex-direction: row;
 }
 
-nav ul li {
-	display: inline-block;
-	font-size: 1.6em;
+#panel-nav ul li {
+	font-size: 2em;
+	flex-shrink: 0;
 }
 
-
-
+#panel-nav ul li a {
+	margin-left: 25px;
+	margin-right: 25px
+}
 a:link, a:visited {
 	color:#ffffff;
 	text-decoration: none;
@@ -56,7 +84,135 @@ a:hover, a:active {
 
 footer {
 	padding:20px;
-	margine:20px;
-	position: relative;
-	bottom:0px;
+	margin:20px;
+	text-align: center;
+}
+.feline-font1 {
+	font-family: "Outfit", sans-serif;
+	font-optical-sizing: auto;
+	font-weight: 500;
+	font-style: normal;
+	transform: translateY(-50vh);
+	animation: transform2 1.5s 1.3s ease forwards;
+}
+@keyframes transform2 {
+	from {
+		transform: translateY(-50vh);
+	}
+	to {
+		transform: translateY(0);
+	}
+}
+.feline-font2 {
+	font-family: "Outfit", sans-serif;
+	font-optical-sizing: auto;
+	font-weight: 500;
+	font-style: normal;
+	opacity: 0;
+	animation: transform3 1.5s 1.3s ease forwards;
+}
+@keyframes transform3 {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+.feline-font h1 {
+	font-size: 3em;
+}
+
+.feline-font li {
+	font-size: 3em;
+}
+.center {
+	text-align: center;
+}
+
+
+@media (max-width: 600px) {
+	#panel-nav {		
+		flex-wrap: wrap;
+		height: 100vh;
+	}
+	#panel-nav svg {
+		width: 50%;
+	}
+	#panel-nav ul  {
+		text-align: center;
+		flex-direction: column;
+		padding-top: 0;
+	}
+	#panel-nav li  {
+		padding-top: 15px;
+	}
+}
+
+
+
+/* -------------------------------------------------
+ *
+ *
+ * NAVBAR
+ *
+ *
+ - --------------------------------------------------*/
+#navbar {
+    color: #FFFFFF;
+	padding-right: 15px;
+	padding-left: 15px;
+	margin-left: auto;
+    margin-right: auto;
+	max-width: 1200px;
+	display: flex;
+	align-items: center;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+#navbar .logo-nav {
+	display: flex;
+	align-items: center;
+	min-width: 300px;
+	transform: translateY(-50vh);
+	animation: transform4 1.5s 1.3s ease forwards;
+}
+@keyframes transform4 {
+	from {
+		transform: translateY(-50vh);
+	}
+	to {
+		transform: translateY(0);
+	}
+}
+
+#navbar ul  {
+    list-style-type: none;
+	min-width: 310px;
+}
+
+#navbar ul li {
+	display: inline-block;
+    margin-left: 15px;
+    margin-right: 15px;
+    font-size: 1.6em;
+}
+
+a:link, a:visited {
+    color:#DDD9D9;
+    text-decoration: none;
+}
+a:hover, a:active {
+    color: #F2CA80;
+    text-decoration: none;
+	transform: scale(1.1);
+}
+
+li.active a {
+    color: #F2CA80;
+}
+#navbar h1 {
+font-variant: small-caps;
 }
